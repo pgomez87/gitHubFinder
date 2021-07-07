@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const UserItem = ({ user: { login, avatar_url, html_url} } ) => {
         //Destructure (We destructure all the state attributes, so there is no need to use "this.state.xxx" in the JSX.)
@@ -14,7 +15,7 @@ const UserItem = ({ user: { login, avatar_url, html_url} } ) => {
                 <h3>{login}</h3>
 
                 <div>
-                    <a href={html_url} className="btn btn-dark btn-sm my-1">More</a>
+                    <Link to={`/user/${login}`} className="btn btn-dark btn-sm my-1">More</Link>
                 </div>
             </div>
         );
