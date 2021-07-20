@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const UserItem = ({ user: { login, avatar_url, html_url} } ) => {
-        //Destructure (We destructure all the state attributes, so there is no need to use "this.state.xxx" in the JSX.)
+
         return (
             <div className="card text-center">
                 <img 
